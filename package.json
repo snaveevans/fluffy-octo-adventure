@@ -1,0 +1,52 @@
+{
+  "name": "@snaveevans/fluffy-octo-adventure",
+  "version": "1.0.0",
+  "description": "A React library with a custom name provider context",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "clean": "rm -rf dist",
+    "build:types": "tsc --emitDeclarationOnly",
+    "build:js": "rollup -c",
+    "build:dts": "rollup -c rollup.dts.config.cjs",
+    "build": "npm run clean && npm run build:types && npm run build:js && npm run build:dts",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snaveevans/fluffy-octo-adventure.git"
+  },
+  "keywords": [
+    "react",
+    "context",
+    "typescript"
+  ],
+  "author": "tyler evans <snaveevans@users.noreply.github.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/snaveevans/fluffy-octo-adventure/issues"
+  },
+  "homepage": "https://github.com/snaveevans/fluffy-octo-adventure#readme",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.0",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "rollup": "^4.0.0",
+    "rollup-plugin-dts": "^6.0.0",
+    "tslib": "^2.5.0",
+    "typescript": "^5.0.0"
+  }
+}
